@@ -1,0 +1,11 @@
+#文字コード、改行コード変換スクリプト
+#!/bin/sh
+for file in `find ./ProLiant -type f`;
+do
+  echo $file
+  iconv -f Shift-JIS -t UTF8 $file > tmpfile
+  tr -d \\r < tmpfile > tmpfile2    
+  mv tmpfile2 $file
+  rm -f tmpfile
+done
+exit
