@@ -6,6 +6,17 @@
       "env": {
         "EDINET_API_KEY": "${EDINET_API_KEY}"
       }
+    },
+    "servicenow": {
+      "command": "npx",
+      "args": ["-y", "happy-platform-mcp@6.0.2"],
+      "env": {
+        "SERVICENOW_INSTANCE_URL": "https://dev436665.service-now.com",
+        "SERVICENOW_AUTH_TYPE": "oauth",
+        "SERVICENOW_OAUTH_GRANT_TYPE": "client_credentials",
+        "SERVICENOW_CLIENT_ID": "${SERVICENOW_CLIENT_ID}",
+        "SERVICENOW_CLIENT_SECRET": "${SERVICENOW_CLIENT_SECRET}"
+      }
     }
   }
 }
